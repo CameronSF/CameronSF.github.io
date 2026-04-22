@@ -289,5 +289,29 @@
   Built by YourName · Hosted on GitHub Pages
 </footer>
 
+<div id="pdf-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:1000; justify-content:center; align-items:center;">
+ <div style="position:relative; width:90%; height:90%;">
+   <button onclick="closeModal()" style="position:absolute; top:-2rem; right:0; color:white; background:none; border:none; font-size:1.5rem; cursor:pointer;">✕</button>
+   <iframe id="pdf-viewer" src="" width="100%" height="100%" style="border:none;"></iframe>
+ </div>
+</div>
+
+ <script>
+  function openPDF(src) {
+    document.getElementById('pdf-viewer').src = src;
+    document.getElementById('pdf-modal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('pdf-modal').style.display = 'none';
+    document.getElementById('pdf-viewer').src = '';
+  }
+
+  // Close when clicking the dark backdrop
+  document.getElementById('pdf-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
+
 </body>
 </html>
