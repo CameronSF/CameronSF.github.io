@@ -121,10 +121,17 @@
 
   footer { text-align: center; padding: 2.5rem; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
 
+  .timeline { position = relative; margin: 0 auto;}
+  .container { padding: 10px 40px; position: relative; backgroundd-color: inherit; width: 50%;}
+  .left { left: 0}
+  .right{ left: 50%}
+  .content{ padding: 20px 30px; background-color: gray; position: relative; border-radius: 6px;}
+  
   @media (max-width: 620px) {
     .about-grid, .projects-grid, .stat-cards { grid-template-columns: 1fr; }
     .nav-links { gap: 1rem; }
   }
+  
 </style>
 </head>
 <body>
@@ -135,6 +142,7 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -397,6 +405,31 @@
     </div>  
    
   </div>
+</section>
+
+<!--experimenting with timeline -->
+<section id="experience">
+  <header>
+    <p>Experience</p>
+  </header>
+  <main>
+   <div class="timelne">
+    <div class="container right">
+     <div class="content">
+      <h2>August 2024 - February 2025</h2>
+      <h3>University of California Irvine</h3>
+      <p>Analyzed Alzheimer’s patient data using R to evaluate clinical study participation and identify factors impacting retention</p>
+     </div>
+    </div> 
+    <div class="container left">
+     <div class="content">
+      <h2>June 2025 - April 2026</h2>
+      <h3>Kingston Technology</h3>
+      <p>Financial Analyst where I created PowerbI dashboards for the sales, financial, and treasury team, create historical databases for DRAM/SSD for the company and competitors, and wrote up reconciliation for revenue prediction models.</p>
+      </div>
+     </div>
+   </div>
+   </main>
 </section>
 
 <section id="contact">
